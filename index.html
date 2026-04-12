@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Voz de los Espíritus= Evidencias | Brenda Médium y coach espíritual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --negro-absoluto: #050505;
+            --rojo-sangre: #d40000;
+            --blanco-marfil: #fdfdfd;
+            --gris-metal: #1a1a1a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--negro-absoluto);
+            color: var(--blanco-marfil);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 70px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top, #2b0000 0%, var(--negro-absoluto) 80%);
+            border-bottom: 2px solid var(--rojo-sangre);
+        }
+
+        /* Estilo del título principal con el = */
+        h1 {
+            font-size: clamp(1.4rem, 5.5vw, 2.6rem);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .symbol-equal {
+            color: var(--rojo-sangre);
+            margin: 0 5px;
+            text-shadow: 0 0 10px var(--rojo-sangre);
+        }
+
+        .coach-subtitle {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: var(--rojo-sangre);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        /* Contenedor de la Emisora */
+        .player-card {
+            width: 90%;
+            max-width: 550px;
+            margin-top: -40px;
+            background: var(--gris-metal);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 25px 50px rgba(0,0,0,1);
+            border-top: 1px solid #333;
+            text-align: center;
+        }
+
+        .on-air-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 35px;
+            color: var(--rojo-sangre);
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .blink-dot {
+            height: 10px;
+            width: 10px;
+            background-color: var(--rojo-sangre);
+            border-radius: 50%;
+            animation: pulse-red 1.5s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 0, 0, 0.7); }
+            70% { transform: scale(1.2); box-shadow: 0 0 0 10px rgba(212, 0, 0, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 0, 0, 0); }
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 35px;
+            filter: invert(1) brightness(1.2);
+        }
+
+        /* Botón de Apoyo */
+        .btn-support {
+            display: inline-block;
+            color: var(--blanco-marfil);
+            text-decoration: none;
+            border: 1px solid var(--rojo-sangre);
+            padding: 15px 35px;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: 0.4s ease;
+        }
+
+        .btn-support:hover {
+            background-color: var(--rojo-sangre);
+            box-shadow: 0 0 25px rgba(212, 0, 0, 0.5);
+            transform: scale(1.02);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 40px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #333;
+            letter-spacing: 2px;
+        }
+
+        /* Adaptación para móviles */
+        @media (max-width: 500px) {
+            header { padding: 50px 15px; }
+            .player-card { padding: 30px 20px; }
+            .coach-subtitle { font-size: 0.9rem; letter-spacing: 3px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>La Voz de los Espíritus<span class="symbol-equal">=</span> Evidencias</h1>
+        <span class="coach-subtitle">Brenda Médium y coach espíritual</span>
+    </header>
+
+    <main class="player-card">
+        <div class="on-air-box">
+            <div class="blink-dot"></div>
+           <span style="font-size: 0.75rem; letter-spacing: 1px;">
+                CUENTANOS TU HISTORIA Y LA ANALIZAMOS EN VIVO
+            </span>
+        </div>
+        
+        <div class="actions" style="display: flex; flex-direction: column; gap: 15px; margin-top: 10px;">
+            <a href="https://wa.me/+50686382310" target="_blank" class="btn-whatsapp" style="background-color: #25d366; color: white; text-decoration: none; padding: 12px; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fab fa-whatsapp"></i> Enviar mi historia por WhatsApp
+            </a>
+
+        <audio controls>
+            <source src="URL_DE_RADIO" type="audio/mpeg">
+            Tu navegador no soporta el audio.
+        </audio>
+
+        <div class="actions">
+            <a href="#" class="btn-support">
+                <i class="fas fa-hand-holding-heart"></i> Apoyar el canal
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 | CARLOS DEVELOPER | CARTAGO, COSTA RICA
+    </footer>
+
+</body>
+</html>
