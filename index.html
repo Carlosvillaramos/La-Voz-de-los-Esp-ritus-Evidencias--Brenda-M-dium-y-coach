@@ -7,118 +7,147 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --negro-absoluto: #050505;
-            --rojo-sangre: #d40000;
-            --blanco-marfil: #fdfdfd;
-            --gris-metal: #1a1a1a;
+            --negro-absoluto: #030303;
+            --rojo-evidencia: #b10000;
+            --blanco-humo: #f0f0f0;
+            --gris-metal: #151515;
+            --verde-wa: #1ebea5;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             background-color: var(--negro-absoluto);
-            color: var(--blanco-marfil);
-            font-family: 'Segoe UI', sans-serif;
+            color: var(--blanco-humo);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         header {
             width: 100%;
-            padding: 70px 20px;
-            text-align: center;
-            background: radial-gradient(circle at top, #2b0000 0%, var(--negro-absoluto) 80%);
-            border-bottom: 2px solid var(--rojo-sangre);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #1a0000 0%, var(--negro-absoluto) 100%);
         }
 
-        /* Estilo del título principal con el = */
-        h1 {
-            font-size: clamp(1.4rem, 5.5vw, 2.6rem);
+        .page-title {
+            font-size: clamp(0.9rem, 4vw, 1.6rem);
+            color: var(--blanco-humo);
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-weight: 700;
-        }
-
-        .symbol-equal {
-            color: var(--rojo-sangre);
-            margin: 0 5px;
-            text-shadow: 0 0 10px var(--rojo-sangre);
-        }
-
-        .coach-subtitle {
-            display: block;
-            margin-top: 20px;
-            font-size: 1.1rem;
-            color: var(--rojo-sangre);
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-
-        /* Contenedor de la Emisora */
-        .player-card {
-            width: 90%;
-            max-width: 550px;
-            margin-top: -40px;
-            background: var(--gris-metal);
-            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 15px;
             border-radius: 4px;
-            box-shadow: 0 25px 50px rgba(0,0,0,1);
-            border-top: 1px solid #333;
+            border: 1px solid var(--rojo-evidencia);
+            position: absolute;
+            top: 30px;
+            z-index: 10;
             text-align: center;
         }
 
-        .on-air-box {
+        .symbol-equal { color: var(--rojo-evidencia); margin: 0 3px; }
+
+        .profile-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(177, 0, 0, 0.3);
+            border: 1px solid var(--gris-metal);
+            margin-top: 15px;
+            z-index: 1;
+        }
+
+        .player-card {
+            width: 90%;
+            max-width: 500px;
+            background: var(--gris-metal);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+            text-align: center;
+            margin-top: -40px;
+            position: relative;
+            z-index: 5;
+            border: 1px solid #222;
+        }
+
+        .status-box {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 35px;
-            color: var(--rojo-sangre);
-            font-size: 0.85rem;
+            gap: 10px;
+            margin-bottom: 25px;
+            color: var(--rojo-evidencia);
+            font-size: 0.75rem;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
-        .blink-dot {
+        .pulse-dot {
             height: 10px;
             width: 10px;
-            background-color: var(--rojo-sangre);
+            background-color: var(--rojo-evidencia);
             border-radius: 50%;
             animation: pulse-red 1.5s infinite;
         }
 
         @keyframes pulse-red {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 0, 0, 0.7); }
-            70% { transform: scale(1.2); box-shadow: 0 0 0 10px rgba(212, 0, 0, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 0, 0, 0); }
+            0% { transform: scale(1); opacity: 1; }
+            70% { transform: scale(1.4); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
         }
 
         audio {
             width: 100%;
-            margin-bottom: 35px;
-            filter: invert(1) brightness(1.2);
+            margin-bottom: 25px;
+            filter: invert(1) brightness(1.5);
         }
 
-        /* Botón de Apoyo */
-        .btn-support {
-            display: inline-block;
-            color: var(--blanco-marfil);
+        .actions { display: flex; flex-direction: column; gap: 12px; }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             text-decoration: none;
-            border: 1px solid var(--rojo-sangre);
-            padding: 15px 35px;
-            font-size: 0.75rem;
-            letter-spacing: 3px;
+            padding: 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
             text-transform: uppercase;
-            transition: 0.4s ease;
+            transition: 0.3s ease;
         }
 
-        .btn-support:hover {
-            background-color: var(--rojo-sangre);
-            box-shadow: 0 0 25px rgba(212, 0, 0, 0.5);
-            transform: scale(1.02);
+        .btn-whatsapp {
+            background-color: var(--verde-wa);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #17a58e;
+            transform: translateY(-2px);
+        }
+
+        .btn-coffee {
+            background-color: transparent;
+            color: var(--blanco-humo);
+            border: 1px solid var(--rojo-evidencia);
+        }
+
+        .btn-coffee:hover {
+            background-color: var(--rojo-evidencia);
+            box-shadow: 0 0 20px rgba(177, 0, 0, 0.5);
+            transform: translateY(-2px);
         }
 
         footer {
@@ -126,52 +155,48 @@
             padding: 40px;
             text-align: center;
             font-size: 0.7rem;
-            color: #333;
+            color: #444;
             letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        /* Adaptación para móviles */
-        @media (max-width: 500px) {
-            header { padding: 50px 15px; }
-            .player-card { padding: 30px 20px; }
-            .coach-subtitle { font-size: 0.9rem; letter-spacing: 3px; }
+        @media (max-width: 480px) {
+            .page-title { top: 15px; width: 85%; }
+            .player-card { padding: 25px 15px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>La Voz de los Espíritus<span class="symbol-equal">=</span> Evidencias</h1>
-        <span class="coach-subtitle">Brenda Médium y coach espíritual</span>
+        <h1 class="page-title">La Voz de los Espíritus<span class="symbol-equal">=</span> Evidencias</h1>
+        <img src="brenda-radio-2.png" alt="Brenda Médium y Coach Espiritual" class="profile-image">
     </header>
 
     <main class="player-card">
-        <div class="on-air-box">
-            <div class="blink-dot"></div>
-           <span style="font-size: 0.75rem; letter-spacing: 1px;">
-                CUENTANOS TU HISTORIA Y LA ANALIZAMOS EN VIVO
-            </span>
+        <div class="status-box">
+            <div class="pulse-dot"></div>
+            <span>CUENTANOS TU HISTORIA Y LA ANALIZAMOS EN VIVO</span>
         </div>
-        
-        <div class="actions" style="display: flex; flex-direction: column; gap: 15px; margin-top: 10px;">
-            <a href="https://wa.me/+50686382310" target="_blank" class="btn-whatsapp" style="background-color: #25d366; color: white; text-decoration: none; padding: 12px; border-radius: 5px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                <i class="fab fa-whatsapp"></i> Enviar mi historia por WhatsApp
-            </a>
 
         <audio controls>
-            <source src="URL_DE_RADIO" type="audio/mpeg">
+            <source src="URL_DE_TU_RADIO" type="audio/mpeg">
             Tu navegador no soporta el audio.
         </audio>
 
         <div class="actions">
-            <a href="#" class="btn-support">
+            <a href="https://wa.me/+50686382310" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Enviar mi historia
+            </a>
+
+            <a href="https://buymeacoffee.com/lavozdelosespiritus" target="_blank" class="btn btn-coffee">
                 <i class="fas fa-hand-holding-heart"></i> Apoyar el canal
             </a>
         </div>
     </main>
 
     <footer>
-        &copy; 2026 | CARLOS DEVELOPER | CARTAGO, COSTA RICA
+        &copy; 2026 | Desarrollado por Carlos Developer | Cartago, Costa Rica
     </footer>
 
 </body>
