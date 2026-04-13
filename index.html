@@ -138,6 +138,13 @@
             transform: translateY(-2px);
         }
 
+        .btn-radio-direct {
+            background-color: #444;
+            color: white;
+            border: 1px solid #666;
+            font-size: 0.75rem;
+        }
+
         .btn-coffee {
             background-color: transparent;
             color: var(--blanco-humo);
@@ -178,15 +185,12 @@
             <div class="pulse-dot"></div>
             <span>CUENTANOS TU HISTORIA Y LA ANALIZAMOS EN VIVO</span>
         </div>
-        <div class="reproductor-seccion">
-    <h2>Escucha En Vivo</h2>
-
-        <audio controls>
-            <source src="http://82.145.41.50:3341/;" type="audio/mpeg">
-            Tu navegador no soporta el audio.
-        </audio>
-        </div>
+        
         <div class="actions">
+            <a href="http://lavoz23.radio12345.com" target="_blank" class="btn btn-radio-direct">
+                <i class="fas fa-external-link-alt"></i> Estamos en VIVO haz clic aquí
+            </a>
+
             <a href="https://wa.me/+50686382310" target="_blank" class="btn btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> Enviar mi historia
             </a>
