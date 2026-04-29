@@ -3,219 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Voz de los Espíritus= Evidencias | Brenda Médium y coach espíritual</title>
+    <meta name="description" content="La Voz de los Espíritus - Brenda Médium y Coach Espiritual">
+    <meta name="author" content="Carlos Developer">
+    <meta property="og:title" content="La Voz de los Espíritus = Evidencias">
+    <meta property="og:description" content="Comparte tu historia y la analizamos en vivo con Brenda Médium">
+    <meta property="og:image" content="brenda-radio-2.png">
+    <title>La Voz de los Espíritus = Evidencias | Brenda Médium y Coach Espiritual</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --negro-absoluto: #030303;
-            --rojo-evidencia: #b10000;
-            --blanco-humo: #f0f0f0;
-            --gris-metal: #151515;
-            --verde-wa: #1ebea5;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            background-color: var(--negro-absoluto);
-            color: var(--blanco-humo);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        header {
-            width: 100%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            background: linear-gradient(to bottom, #1a0000 0%, var(--negro-absoluto) 100%);
-        }
-
-        .page-title {
-            font-size: clamp(0.9rem, 4vw, 1.6rem);
-            color: var(--blanco-humo);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px 15px;
-            border-radius: 4px;
-            border: 1px solid var(--rojo-evidencia);
-            position: absolute;
-            top: 30px;
-            z-index: 10;
-            text-align: center;
-        }
-
-        .symbol-equal { color: var(--rojo-evidencia); margin: 0 3px; }
-
-        .profile-image {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 40px rgba(177, 0, 0, 0.3);
-            border: 1px solid var(--gris-metal);
-            margin-top: 15px;
-            z-index: 1;
-        }
-
-        .player-card {
-            width: 90%;
-            max-width: 500px;
-            background: var(--gris-metal);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.9);
-            text-align: center;
-            margin-top: -40px;
-            position: relative;
-            z-index: 5;
-            border: 1px solid #222;
-        }
-
-        .status-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 25px;
-            color: var(--rojo-evidencia);
-            font-size: 0.75rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .pulse-dot {
-            height: 10px;
-            width: 10px;
-            background-color: var(--rojo-evidencia);
-            border-radius: 50%;
-            animation: pulse-red 1.5s infinite;
-        }
-
-        @keyframes pulse-red {
-            0% { transform: scale(1); opacity: 1; }
-            70% { transform: scale(1.4); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        audio {
-            width: 100%;
-            margin-bottom: 25px;
-            filter: invert(1) brightness(1.5);
-        }
-
-        .actions { display: flex; flex-direction: column; gap: 12px; }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            text-decoration: none;
-            padding: 16px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: 0.3s ease;
-        }
-
-        .btn-whatsapp {
-            background-color: var(--verde-wa);
-            color: white;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #17a58e;
-            transform: translateY(-2px);
-        }
-
-        .btn-radio-direct {
-            background-color: #444;
-            color: white;
-            border: 1px solid #666;
-            font-size: 0.75rem;
-        }
-
-        .btn-coffee {
-            background-color: transparent;
-            color: var(--blanco-humo);
-            border: 1px solid var(--rojo-evidencia);
-        }
-
-        .btn-coffee:hover {
-            background-color: var(--rojo-evidencia);
-            box-shadow: 0 0 20px rgba(177, 0, 0, 0.5);
-            transform: translateY(-2px);
-        }
-
-        footer {
-            margin-top: auto;
-            padding: 40px;
-            text-align: center;
-            font-size: 0.7rem;
-            color: #444;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        @media (max-width: 480px) {
-            .page-title { top: 15px; width: 85%; }
-            .player-card { padding: 25px 15px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1 class="page-title">La Voz de los Espíritus<span class="symbol-equal">=</span> Evidencias</h1>
-        <img src="brenda-radio-2.png" alt="Brenda Médium y Coach Espiritual" class="profile-image">
+        <div class="container">
+            <p class="logo">La Voz de los Espíritus</p>
+            <nav>
+                <a href="#en-vivo">En Vivo</a>
+                <a href="#videos">Videos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="player-card">
-        <div class="status-box">
-            <div class="pulse-dot"></div>
-            <span>CUENTANOS TU HISTORIA Y LA ANALIZAMOS EN VIVO</span>
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="foto-container">
+                    <img src="brenda-radio-2.png" alt="Brenda Médium y Coach Espiritual" class="profile-image">
+                </div>
+                <div class="hero-texto">
+                    <h1>La Voz de los Espíritus<span class="symbol-equal"> = </span>Evidencias</h1>
+                    <p class="subtitulo">Brenda Médium y Coach Espiritual</p>
+                    <div class="status-box">
+                        <div class="pulse-dot"></div>
+                        <span>Cuéntanos tu historia y la analizamos en vivo</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-         <div class="reproductor-seccion">
-    <h2 style="margin-bottom: 15px; font-size: 1rem;">Escucha En Vivo</h2>
-    <iframe 
-        src="https://lavoz23.radio12345.com" 
-        width="100%" 
-        height="200" 
-        frameborder="0" 
-        scrolling="no"
-        title="Reproductor de radio La Voz de los Espíritus"
-        style="border-radius: 8px;">
-    </iframe>
-</div>
+    </section>
 
-        <div class="actions">
+    <section id="en-vivo">
+        <div class="container">
+            <h2>📻 Escucha En Vivo</h2>
+            <iframe
+                src="https://lavoz23.radio12345.com"
+                width="100%"
+                height="200"
+                frameborder="0"
+                scrolling="no"
+                title="Reproductor de radio La Voz de los Espíritus"
+                style="border-radius: 8px;">
+            </iframe>
             <a href="http://lavoz23.radio12345.com" target="_blank" class="btn btn-radio-direct">
-                <i class="fas fa-external-link-alt"></i> Haz Clic aquí
-            </a>
-
-            <a href="https://wa.me/+50686382310" target="_blank" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Enviar mi historia
-            </a>
-
-            <a href="https://buymeacoffee.com/lavozdelosespiritus" target="_blank" class="btn btn-coffee">
-                <i class="fas fa-hand-holding-heart"></i> Apoyar el canal
+                <i class="fas fa-external-link-alt"></i> Abrir reproductor externo
             </a>
         </div>
-    </main>
+    </section>
+
+    <section id="videos">
+        <div class="container">
+            <h2>🎬 Videos Destacados</h2>
+            <div class="videos-grid">
+                <div class="video-item">
+                    <iframe
+                        src="https://www.youtube.com/embed/PS6CCCteCiE"
+                        title="Video de Brenda Médium 1"
+                        height="200"
+                        width="100%"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-item">
+                    <iframe
+                        src="https://www.youtube.com/embed/kmt2QlrK8Zo"
+                        title="Video de Brenda Médium 2"
+                        height="200"
+                        width="100%"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-item">
+                    <iframe
+                        src="https://www.youtube.com/embed/yeZNjOSxrqw"
+                        title="Video de Brenda Médium 3"
+                        height="200"
+                        width="100%"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <a href="https://www.youtube.com/@mediumycoachespiritual-bre8014" target="_blank" class="btn btn-youtube">
+                <i class="fab fa-youtube"></i> Ver todos los videos
+            </a>
+        </div>
+    </section>
+
+    <section id="redes">
+        <div class="container">
+            <h2>📱 Síguenos en Redes</h2>
+            <div class="redes-grid">
+                <a href="https://www.facebook.com/profile.php?id=100067476692597" target="_blank" class="btn btn-facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://www.tiktok.com/@brendamedium0" target="_blank" class="btn btn-tiktok">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                <a href="https://www.youtube.com/@mediumycoachespiritual-bre8014" target="_blank" class="btn btn-youtube">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>💬 Contacto</h2>
+            <p>¿Querés compartir tu historia? ¡Escribinos por WhatsApp o apoyá el canal!</p>
+            <div class="acciones">
+                <a href="https://wa.me/+50686382310" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Enviar mi historia
+                </a>
+                <a href="https://buymeacoffee.com/lavozdelosespiritus" target="_blank" class="btn btn-coffee">
+                    <i class="fas fa-hand-holding-heart"></i> Apoyar el canal
+                </a>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        &copy; 2026 | Desarrollado por Carlos Developer | Cartago, Costa Rica
+        <div class="container">
+            <p>© 2026 | Desarrollado por Carlos Developer | Cartago, Costa Rica</p>
+        </div>
     </footer>
 
 </body>
