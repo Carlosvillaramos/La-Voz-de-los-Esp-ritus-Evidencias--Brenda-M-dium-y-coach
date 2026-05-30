@@ -44,33 +44,22 @@
     </section>
 
     <section id="en-vivo">
-        <div class="container">
-            <h2>📻 Escucha En Vivo</h2>
-            
-            <!-- NUEVO REPRODUCTOR PARA TU MAMÁ -->
-            <div class="radio-container" style="background: linear-gradient(145deg, #131313, #2a0845); padding: 30px; border-radius: 15px; border: 2px solid #8a2be2; text-align: center; box-shadow: 0 0 20px rgba(138, 43, 226, 0.3); margin-bottom: 20px;">
-                <p style="color: #00ffcc; font-family: monospace; letter-spacing: 2px; margin-bottom: 15px; font-weight: bold;">
-                    <i class="fas fa-ghost"></i> SEÑAL DIRECTA ACTIVADA
-                </p>
-                
-                <!-- Truco del punto y coma para Shoutcast v1 -->
-                <audio controls style="width: 100%; border-radius: 50px;">
-                    <source src="http://82.145.41.50:3341/;stream" type="audio/mpeg">
-                    Tu navegador no soporta el audio.
-                </audio>
-
-              
-
-                <p style="margin-top: 15px; font-size: 0.85rem; color: #bbb; font-style: italic;">
-                    Si no escuchas audio, presiona Play o verifica que la transmisión esté al aire.
-                </p>
-            </div>
-
-            <a href="http://lavoz23.radio12345.com" target="_blank" class="btn btn-radio-direct">
-                <i class="fas fa-external-link-alt"></i> Abrir Reproductor Oficial
-            </a>
+    <div class="container">
+        <h2>📻 Escucha En Vivo</h2>
+        <div data-type="newStreamPlayer" 
+             data-publicToken="c0cb542c-3c7f-4621-bb7c-6367cf529e09" 
+             data-theme="dark" 
+             data-color="8a2be2" 
+             data-channelId="" 
+             data-rendered="false" 
+             class="cstrEmbed">
+            <a href="https://www.caster.fm">Shoutcast Hosting</a>
+            <a href="https://www.caster.fm">Stream Hosting</a>
+            <a href="https://www.caster.fm">Radio Server Hosting</a>
         </div>
-    </section>
+        <script src="https://cdn.cloud.caster.fm/widgets/embed.js"></script>
+    </div>
+</section>
 
     <section id="videos">
         <div class="container">
